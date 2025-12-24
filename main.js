@@ -14,7 +14,6 @@ renderer.setAnimationLoop( animate );
 renderer.render(scene, camera);
 
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 const texture = new THREE.TextureLoader().load('goog.png')
@@ -23,7 +22,7 @@ const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 const donut_geo = new THREE.TorusGeometry(10, 3, 16, 100);
-const donut_tex = new THREE.MeshBasicMaterial({ color: 0xffffff });
+const donut_tex = new THREE.MeshBasicMaterial({ color: 0xFFA500 });
 const donut = new THREE.Mesh(donut_geo, donut_tex);
 scene.add(donut);
 

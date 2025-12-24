@@ -3,8 +3,8 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  pointer-events: none;
 }
-
 
 * {
   font-family: brandon-grotesque, sans-serif;
@@ -14,7 +14,8 @@ canvas {
 
 main {
   color: white;
-  position: absolute;
+  position: relative;
+  z-index: 1;
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
@@ -22,7 +23,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-header {
+  header {
     background: rgba(15, 15, 15, 0.95);
     grid-column: 2 / span 5;
     font-size: 40px;
@@ -30,7 +31,7 @@ header {
     margin-bottom: 350px;
   }
 
-section {
+  section {
     grid-column: 2 / 8;
     padding: 16px;
     background: rgba(15, 15, 15, 0.95);
@@ -39,6 +40,10 @@ section {
     margin-bottom: 350px;
   }
 
-.left {
+  .left {
     grid-column: 6 / 12;
+  }
+
+.no-invert {
+  filter: invert(var(--invert-amount, 0));
 }
