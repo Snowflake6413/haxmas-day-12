@@ -16,7 +16,7 @@ renderer.render(scene, camera);
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const texture = new THREE.TextureLoader().load('/public/goog.png')
+const texture = new THREE.TextureLoader().load('goog.png')
 const material = new THREE.MeshBasicMaterial( { map: texture } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
